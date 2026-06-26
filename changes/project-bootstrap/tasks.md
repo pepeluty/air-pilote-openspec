@@ -31,7 +31,7 @@ Chain strategy: stacked-to-main
 
 ## Phase 1: Foundation
 
-- [ ] 1.1 [shared] `git init` `frontend/`, `backend/`, `openspec/` as 3 independent repos; per-repo `.gitignore` + README
+- [x] 1.1 [shared] `git init` `frontend/`, `backend/`, `openspec/` as 3 independent repos; per-repo `.gitignore` + README
 - [ ] 1.2 [backend] Create `backend/{package.json,tsconfig.json,.eslintrc.cjs}` NestJS+MikroORM + `no-restricted-imports` layer guard
 - [ ] 1.3 [backend] Create `backend/src/{main.ts,app.module.ts}` + `shared/{domain,application}/*` base Entity/VO/UseCase
 - [ ] 1.4 [backend] Create `backend/src/shared/{UserExists.port.ts,AuthGuard.ts,errors/*}` typed errors + global AuthGuard (CRITICAL)
