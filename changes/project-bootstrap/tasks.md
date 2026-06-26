@@ -32,9 +32,9 @@ Chain strategy: stacked-to-main
 ## Phase 1: Foundation
 
 - [x] 1.1 [shared] `git init` `frontend/`, `backend/`, `openspec/` as 3 independent repos; per-repo `.gitignore` + README
-- [ ] 1.2 [backend] Create `backend/{package.json,tsconfig.json,.eslintrc.cjs}` NestJS+MikroORM + `no-restricted-imports` layer guard
-- [ ] 1.3 [backend] Create `backend/src/{main.ts,app.module.ts}` + `shared/{domain,application}/*` base Entity/VO/UseCase
-- [ ] 1.4 [backend] Create `backend/src/shared/{UserExists.port.ts,AuthGuard.ts,errors/*}` typed errors + global AuthGuard (CRITICAL)
+- [x] 1.2 [backend] Create `backend/{package.json,tsconfig.json,.eslintrc.cjs}` NestJS+MikroORM + `no-restricted-imports` layer guard
+- [x] 1.3 [backend] Create `backend/src/{main.ts,app.module.ts}` + `shared/{domain,application}/*` base Entity/VO/UseCase
+- [x] 1.4 [backend] Create `backend/src/shared/{UserExists.port.ts,AuthGuard.ts,errors/*}` typed errors + global AuthGuard (CRITICAL)
 - [ ] 1.5 [frontend] Create `frontend/{package.json,vite.config.ts,tsconfig.json,.eslintrc.cjs}` Vite+React+TS+PixiJS+Zustand+Vitest+Playwright
 - [ ] 1.6 [frontend] Create `frontend/src/{main.tsx,App.tsx}` screen router skeleton (phase-based)
 
