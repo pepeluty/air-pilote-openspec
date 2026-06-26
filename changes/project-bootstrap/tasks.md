@@ -35,8 +35,8 @@ Chain strategy: stacked-to-main
 - [x] 1.2 [backend] Create `backend/{package.json,tsconfig.json,.eslintrc.cjs}` NestJS+MikroORM + `no-restricted-imports` layer guard
 - [x] 1.3 [backend] Create `backend/src/{main.ts,app.module.ts}` + `shared/{domain,application}/*` base Entity/VO/UseCase
 - [x] 1.4 [backend] Create `backend/src/shared/{UserExists.port.ts,AuthGuard.ts,errors/*}` typed errors + global AuthGuard (CRITICAL)
-- [ ] 1.5 [frontend] Create `frontend/{package.json,vite.config.ts,tsconfig.json,.eslintrc.cjs}` Vite+React+TS+PixiJS+Zustand+Vitest+Playwright
-- [ ] 1.6 [frontend] Create `frontend/src/{main.tsx,App.tsx}` screen router skeleton (phase-based)
+- [x] 1.5 [frontend] Create `frontend/{package.json,vite.config.ts,tsconfig.json,.eslintrc.cjs}` Vite+React+TS+PixiJS+Zustand+Vitest+Playwright
+- [x] 1.6 [frontend] Create `frontend/src/{main.tsx,App.tsx}` screen router skeleton (phase-based)
 
 ## Phase 2: Core Implementation — Backend
 
@@ -52,8 +52,8 @@ Chain strategy: stacked-to-main
 
 ## Phase 3: Core Implementation — Frontend
 
-- [ ] 3.1 [frontend] Create `src/game/state/gameStore.ts` Zustand store (phase/score/health + set; bidirectional bridge)
-- [ ] 3.2 [frontend] Create `src/game/engine/{Engine,TickerLoop,WorldContainer}.ts` (PIXI.Application, ticker, camera follow+clamp, store.phase subscription)
+- [x] 3.1 [frontend] Create `src/game/state/gameStore.ts` Zustand store (phase/score/health + set; bidirectional bridge)
+- [x] 3.2 [frontend] Create `src/game/engine/{Engine,TickerLoop,WorldContainer}.ts` (PIXI.Application, ticker, camera follow+clamp, store.phase subscription)
 - [ ] 3.3 [frontend] Create `src/game/entities/{Jet,Projectile,Enemy}.ts`
 - [ ] 3.4 [frontend] Create `src/game/systems/{Movement,Shooting}.ts` (diagonal normalize; cooldown; `playing`-gated)
 - [ ] 3.5 [frontend] Create `src/game/systems/{EnemyAI,Spawn,Collision}.ts` (enemy destroyed+score; player -health; health=0→gameOver)
