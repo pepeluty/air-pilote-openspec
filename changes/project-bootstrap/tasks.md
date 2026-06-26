@@ -54,9 +54,9 @@ Chain strategy: stacked-to-main
 
 - [x] 3.1 [frontend] Create `src/game/state/gameStore.ts` Zustand store (phase/score/health + set; bidirectional bridge)
 - [x] 3.2 [frontend] Create `src/game/engine/{Engine,TickerLoop,WorldContainer}.ts` (PIXI.Application, ticker, camera follow+clamp, store.phase subscription)
-- [ ] 3.3 [frontend] Create `src/game/entities/{Jet,Projectile,Enemy}.ts`
-- [ ] 3.4 [frontend] Create `src/game/systems/{Movement,Shooting}.ts` (diagonal normalize; cooldown; `playing`-gated)
-- [ ] 3.5 [frontend] Create `src/game/systems/{EnemyAI,Spawn,Collision}.ts` (enemy destroyed+score; player -health; health=0→gameOver)
+- [x] 3.3 [frontend] Create `src/game/entities/{Jet,Projectile,Enemy}.ts`
+- [x] 3.4 [frontend] Create `src/game/systems/{Movement,Shooting}.ts` (diagonal normalize; cooldown; `playing`-gated)
+- [x] 3.5 [frontend] Create `src/game/systems/{EnemyAI,Spawn,Collision}.ts` (enemy destroyed+score; player -health; health=0→gameOver)
 - [ ] 3.6 [frontend] Create `src/ui/api/client.ts` fetch wrapper (token attach, refresh-on-401, credentials: include)
 - [ ] 3.7 [frontend] Create `src/ui/screens/{Auth,Menu,GameOver,Paused}Screen.tsx` + `hud/HUD.tsx` DOM overlay
 
