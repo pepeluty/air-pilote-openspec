@@ -46,9 +46,9 @@ Chain strategy: stacked-to-main
 - [x] 2.4 [backend] Create `contexts/identity/application/usecases/RefreshToken.ts` family detection state machine + try/finally lock
 - [x] 2.5 [backend] Create `contexts/identity/application/usecases/Logout.ts` (revoke family + clear refresh cookie)
 - [x] 2.6 [backend] Create `contexts/identity/infrastructure/*` (Nest module, AuthController, MikroORM repos impl `UserExists`, Argon2+JWT adapters, ORM entities) + `migrations/*`
-- [ ] 2.7 [backend] Create `contexts/game-records/domain/{GameRecord,vo/Score}.ts` (non-negative Score VO)
-- [ ] 2.8 [backend] Create `contexts/game-records/application/{ports/GameRecordRepository,usecases/{PersistGameRecord,GetHighScore,ListGameRecords}}.ts`
-- [ ] 2.9 [backend] Create `contexts/game-records/infrastructure/*` (Nest module, controller, MikroORM repo, ORM entity)
+- [x] 2.7 [backend] Create `contexts/game-records/domain/{GameRecord,vo/Score}.ts` (non-negative Score VO)
+- [x] 2.8 [backend] Create `contexts/game-records/application/{ports/GameRecordRepository,usecases/{PersistGameRecord,GetHighScore,ListGameRecords}}.ts`
+- [x] 2.9 [backend] Create `contexts/game-records/infrastructure/*` (Nest module, controller, MikroORM repo, ORM entity)
 
 ## Phase 3: Core Implementation — Frontend
 
