@@ -1,0 +1,8 @@
+# OS / editor noise
+.DS_Store
+
+# Logs
+*.log
+
+# Skill / agent cache (if ever copied in)
+.skill-registry.cache.json

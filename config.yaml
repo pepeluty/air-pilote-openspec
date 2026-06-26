@@ -1,0 +1,66 @@
+# OpenSpec config — Air-Pilote
+# SDD planning context lives at the Air-Pilote workspace level and covers BOTH
+# independent git repos (frontend + backend). Individual SDD changes can be
+# scoped per repo later (e.g. `backend-auth`, `frontend-game-loop`).
+
+schema: spec-driven
+
+context: |
+  Project: Air-Pilote — 2D top-down (cenital) jet game.
+  Layout: Greenfield workspace hosting TWO INDEPENDENT git repositories.
+  - Frontend (React + TypeScript): web game client. 2D top-down jet maneuverable
+    in all 2D directions over a large scrollable panoramic terrain map. Render
+    engine / game-loop tech TBD (candidates: HTML Canvas 2D, PixiJS, Phaser).
+  - Backend (NestJS): player sign-up and persistence of important game records
+    (scores, progress). Auth mechanism and database TBD.
+  Stack detection: NONE — greenfield, no package.json, no test runner, no git yet.
+  Architecture: dual-repo monorepo-ish workspace (frontend + backend), no shared
+    code yet.
+  Testing: NONE yet. Intended stacks to re-evaluate once repos are scaffolded:
+    frontend likely Vitest/Jest + React Testing Library; backend NestJS Jest.
+  Style: English technical artifacts; warm Rioplatense Spanish for chat replies.
+
+persistence: hybrid   # both openspec/ files AND Engram observations
+
+strict_tdd: false     # no test runner detected yet — re-evaluate after repo scaffolding
+
+testing:
+  runner: none
+  unit: none
+  integration: none
+  e2e: none
+  coverage: none
+  linter: none
+  type_checker: none
+  formatter: none
+  intended_frontend: Vitest/Jest + React Testing Library (TBD)
+  intended_backend: NestJS built-in Jest (TBD)
+
+rules:
+  proposal:
+    - Decide render engine / game-loop tech in explore/proposal phase (Canvas 2D vs PixiJS vs Phaser)
+    - Decide backend auth mechanism and database in explore/proposal phase
+    - Include rollback plan for risky changes
+    - State whether the change is scoped to frontend, backend, or shared SDD context
+  specs:
+    - Use Given/When/Then for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+    - Domain names should reflect repo scope (frontend-* / backend-* / shared-*)
+  design:
+    - Include sequence diagrams for complex flows (game loop, auth, score persistence)
+    - Document architecture decisions with rationale
+    - Keep frontend and backend concerns separated in design sections
+  tasks:
+    - Group by phase, use hierarchical numbering
+    - Keep tasks completable in one session
+    - Tag each task with [frontend] / [backend] / [shared] when relevant
+  apply:
+    - Follow existing code patterns once scaffolding exists
+    tdd: false                # re-evaluate to true once test runners exist
+    test_command: ""           # to be filled after repo scaffolding
+  verify:
+    test_command: ""           # to be filled after repo scaffolding
+    build_command: ""          # to be filled after repo scaffolding
+    coverage_threshold: 0      # to be raised once coverage tooling exists
+  archive:
+    - Warn before merging destructive deltas
