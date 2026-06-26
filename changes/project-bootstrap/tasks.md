@@ -40,12 +40,12 @@ Chain strategy: stacked-to-main
 
 ## Phase 2: Core Implementation — Backend
 
-- [ ] 2.1 [backend] Create `contexts/identity/domain/{User,RefreshToken,PasswordPolicy}.ts` + `vo/{Email,Credentials,AuthToken}.ts` (policy: min 8, max 72, >=1 letter AND >=1 number)
-- [ ] 2.2 [backend] Create `contexts/identity/application/ports/*` (PasswordHasher, TokenSigner, RefreshTokenStore, UserRepository) + `RefreshTokenRow`/`LockHandle` types
-- [ ] 2.3 [backend] Create `contexts/identity/application/usecases/{RegisterUser,LoginUser}.ts`
-- [ ] 2.4 [backend] Create `contexts/identity/application/usecases/RefreshToken.ts` family detection state machine + try/finally lock
-- [ ] 2.5 [backend] Create `contexts/identity/application/usecases/Logout.ts` (revoke family + clear refresh cookie)
-- [ ] 2.6 [backend] Create `contexts/identity/infrastructure/*` (Nest module, AuthController, MikroORM repos impl `UserExists`, Argon2+JWT adapters, ORM entities) + `migrations/*`
+- [x] 2.1 [backend] Create `contexts/identity/domain/{User,RefreshToken,PasswordPolicy}.ts` + `vo/{Email,Credentials,AuthToken}.ts` (policy: min 8, max 72, >=1 letter AND >=1 number)
+- [x] 2.2 [backend] Create `contexts/identity/application/ports/*` (PasswordHasher, TokenSigner, RefreshTokenStore, UserRepository) + `RefreshTokenRow`/`LockHandle` types
+- [x] 2.3 [backend] Create `contexts/identity/application/usecases/{RegisterUser,LoginUser}.ts`
+- [x] 2.4 [backend] Create `contexts/identity/application/usecases/RefreshToken.ts` family detection state machine + try/finally lock
+- [x] 2.5 [backend] Create `contexts/identity/application/usecases/Logout.ts` (revoke family + clear refresh cookie)
+- [x] 2.6 [backend] Create `contexts/identity/infrastructure/*` (Nest module, AuthController, MikroORM repos impl `UserExists`, Argon2+JWT adapters, ORM entities) + `migrations/*`
 - [ ] 2.7 [backend] Create `contexts/game-records/domain/{GameRecord,vo/Score}.ts` (non-negative Score VO)
 - [ ] 2.8 [backend] Create `contexts/game-records/application/{ports/GameRecordRepository,usecases/{PersistGameRecord,GetHighScore,ListGameRecords}}.ts`
 - [ ] 2.9 [backend] Create `contexts/game-records/infrastructure/*` (Nest module, controller, MikroORM repo, ORM entity)
