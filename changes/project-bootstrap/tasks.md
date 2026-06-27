@@ -62,11 +62,11 @@ Chain strategy: stacked-to-main
 
 ## Phase 4: Testing & Integration
 
-- [ ] 4.1 [backend] Jest unit (in-memory fakes): registration success/duplicate-email/weak-pw; login success/invalid-creds; plaintext-never-stored
-- [ ] 4.2 [backend] Jest unit: rotation success/reuse→family-revoke/expired; logout revoke-family; lock release on error path (try/finally torture)
-- [ ] 4.3 [backend] Jest unit: AuthGuard ok; valid+DELETED→NonExistentUserError 401 (CRITICAL); foreign/expired→Unauthenticated; Score non-negative; GameRecord aggregate
-- [ ] 4.4 [backend] testcontainers Postgres: MikroORM repos; paginated history page-2/size-10→empty + past-end; high score 3000-over-1200/950; no-records→null; cannot-access-others; family revoke persists all `revoked`; UserExists read-model; Argon2/JWT adapters
-- [ ] 4.5 [frontend] Vitest unit: diagonal move + normalize; no-input hold; fire cooldown; fire-blocked-outside-playing
-- [ ] 4.6 [frontend] Vitest unit: enemy destroyed+score; player damage -health; camera follow; clamp at edge; health→0→gameOver; menu→playing; pause trigger
-- [ ] 4.7 [frontend] Vitest unit: slow-state publish (1 write/change); per-frame data isolation (store NOT touched)
-- [ ] 4.8 [frontend] Playwright E2E: register→menu; login failure; menu→play→gameOver→score saved; pause/resume; HUD score+health update; no canvas pixel asserts v1
+- [x] 4.1 [backend] Jest unit (in-memory fakes): registration success/duplicate-email/weak-pw; login success/invalid-creds; plaintext-never-stored
+- [x] 4.2 [backend] Jest unit: rotation success/reuse→family-revoke/expired; logout revoke-family; lock release on error path (try/finally torture)
+- [x] 4.3 [backend] Jest unit: AuthGuard ok; valid+DELETED→NonExistentUserError 401 (CRITICAL); foreign/expired→Unauthenticated; Score non-negative; GameRecord aggregate
+- [x] 4.4 [backend] testcontainers Postgres: MikroORM repos; paginated history page-2/size-10→empty + past-end; high score 3000-over-1200/950; no-records→null; cannot-access-others; family revoke persists all `revoked`; UserExists read-model; Argon2/JWT adapters
+- [x] 4.5 [frontend] Vitest unit: diagonal move + normalize; no-input hold; fire cooldown; fire-blocked-outside-playing
+- [x] 4.6 [frontend] Vitest unit: enemy destroyed+score; player damage -health; camera follow; clamp at edge; health→0→gameOver; menu→playing; pause trigger
+- [x] 4.7 [frontend] Vitest unit: slow-state publish (1 write/change); per-frame data isolation (store NOT touched)
+- [x] 4.8 [frontend] Playwright E2E: register→menu; login failure; menu→play→gameOver→score saved; pause/resume; HUD score+health update; no canvas pixel asserts v1
