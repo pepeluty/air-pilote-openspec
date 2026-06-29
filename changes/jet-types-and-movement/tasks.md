@@ -64,10 +64,10 @@ Chain strategy: stacked-to-main
 
 ## Phase 5: Frontend Combat Multi-hit [frontend]
 
-- [ ] 5.1 Modify `frontend/src/game/entities/Enemy.ts` — health default 100 from `ENEMY_MAX_HEALTH`; verify `takeDamage(amount)` decrements + flags destroyed at health<=0
-- [ ] 5.2 Modify `frontend/src/game/entities/Projectile.ts` — add `damage` property set from jet at spawn
-- [ ] 5.3 Modify `frontend/src/game/systems/CollisionSystem.ts` — projectile hit applies `projectile.damage` (multi-hit, destroy+score at health<=0); contact `actualDamage = ENEMY_CONTACT_DAMAGE*(1-jet.defense/100)`
-- [ ] 5.4 Modify `frontend/src/game/systems/ShootingSystem.ts` — spawn `Projectile` carrying `jet.damage`
+- [x] 5.1 Modify `frontend/src/game/entities/Enemy.ts` — health default 100 from `ENEMY_MAX_HEALTH`; verify `takeDamage(amount)` decrements + flags destroyed at health<=0
+- [x] 5.2 Modify `frontend/src/game/entities/Projectile.ts` — add `damage` property set from jet at spawn
+- [x] 5.3 Modify `frontend/src/game/systems/CollisionSystem.ts` — projectile hit applies `projectile.damage` (multi-hit, destroy+score at health<=0); contact `actualDamage = ENEMY_CONTACT_DAMAGE*(1-jet.defense/100)`
+- [x] 5.4 Modify `frontend/src/game/systems/ShootingSystem.ts` — spawn `Projectile` carrying `jet.damage`
 
 ## Phase 6: Frontend Selection UI + Wiring [frontend]
 
