@@ -71,9 +71,9 @@ Chain strategy: stacked-to-main
 
 ## Phase 6: Frontend Selection UI + Wiring [frontend]
 
-- [ ] 6.1 Modify `frontend/src/ui/screens/MenuScreen.tsx` — 3-card selection; fetch `getJetTypes` on mount with `FALLBACK_JET_TYPES` on failure; click sets `selectedJetTypeId`+`jetStats`
-- [ ] 6.2 Modify `frontend/src/ui/screens/GameOverScreen.tsx` — pass `selectedJetTypeId` to `saveGameRecord`
-- [ ] 6.3 Wire Start Game precondition — disable Start until `selectedJetTypeId` set (spec "Start game" scenario: unset → unavailable)
+- [x] 6.1 Modify `frontend/src/ui/screens/MenuScreen.tsx` — 3-card selection; fetch `getJetTypes` on mount with `FALLBACK_JET_TYPES` on failure; click sets `selectedJetTypeId`+`jetStats`
+- [x] 6.2 Modify `frontend/src/ui/screens/GameOverScreen.tsx` — pass `selectedJetTypeId` to `saveGameRecord`
+- [x] 6.3 Wire Start Game precondition — disable Start until `selectedJetTypeId` set (spec "Start game" scenario: unset → unavailable)
 
 ## Phase 7: Testing & Verification [shared]
 
