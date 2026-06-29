@@ -42,12 +42,12 @@ Chain strategy: stacked-to-main
 
 ## Phase 2: Backend game-records Extension [backend]
 
-- [ ] 2.1 Modify `backend/src/contexts/game-records/domain/GameRecord.ts` — add `jetTypeId` field + update `create`/`rehydrate` signatures
-- [ ] 2.2 Modify `backend/src/contexts/game-records/infrastructure/persistence/{GameRecordEntity,mappers}.ts` — add `jet_type_id` column + mapper round-trip
-- [ ] 2.3 Modify `backend/src/contexts/game-records/application/usecases/PersistGameRecord.ts` — add `jetTypeId` cmd + `JetTypeExists` validation (reject unknown → `ValidationError` 422, no FK 500)
-- [ ] 2.4 Modify `backend/src/contexts/game-records/infrastructure/controllers/GameRecordsController.ts` — DTO + response include `jetTypeId`
-- [ ] 2.5 Modify `backend/src/contexts/game-records/infrastructure/nest-game-records.module.ts` — import `JetTypesModule` for `JetTypeExists`
-- [ ] 2.6 Create `backend/src/migrations/Migration20260626000003_game_records_jet_type_fk.ts` — add `jet_type_id` NOT NULL FK default Balanced UUID (MUST run after 1.8)
+- [x] 2.1 Modify `backend/src/contexts/game-records/domain/GameRecord.ts` — add `jetTypeId` field + update `create`/`rehydrate` signatures
+- [x] 2.2 Modify `backend/src/contexts/game-records/infrastructure/persistence/{GameRecordEntity,mappers}.ts` — add `jet_type_id` column + mapper round-trip
+- [x] 2.3 Modify `backend/src/contexts/game-records/application/usecases/PersistGameRecord.ts` — add `jetTypeId` cmd + `JetTypeExists` validation (reject unknown → `ValidationError` 422, no FK 500)
+- [x] 2.4 Modify `backend/src/contexts/game-records/infrastructure/controllers/GameRecordsController.ts` — DTO + response include `jetTypeId`
+- [x] 2.5 Modify `backend/src/contexts/game-records/infrastructure/nest-game-records.module.ts` — import `JetTypesModule` for `JetTypeExists`
+- [x] 2.6 Create `backend/src/migrations/Migration20260626000003_game_records_jet_type_fk.ts` — add `jet_type_id` NOT NULL FK default Balanced UUID (MUST run after 1.8)
 
 ## Phase 3: Frontend API + Store + Constants [frontend]
 
