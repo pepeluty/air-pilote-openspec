@@ -8,13 +8,19 @@ Persists completed Air-Pilote game session records and exposes per-player histor
 
 ### Requirement: Persist Game Record
 
-The system MUST persist exactly one game record per completed session for the authenticated player containing userId, score, durationMs, and timestamp, MUST reject records for unauthenticated callers, and MUST reject non-negative-score violations (score MUST be non-negative).
+The system MUST persist exactly one game record per completed session for the authenticated player containing `userId`, `score`, `durationMs`, `timestamp`, and `jetTypeId`, MUST reject records for unauthenticated callers, MUST reject non-negative-score violations (score MUST be non-negative), and MUST reject records whose `jetTypeId` does not reference an existing jet type.
 
 #### Scenario: Successful persistence
 
-- GIVEN an authenticated player completes a session with score 1200 and durationMs 45000
+- GIVEN an authenticated player completes a session with score 1200, durationMs 45000, and a valid `jetTypeId`
 - WHEN a persist request is submitted
-- THEN a record is stored with the userId, score, durationMs, and a server-assigned timestamp
+- THEN a record is stored with the userId, score, durationMs, jetTypeId, and a server-assigned timestamp
+
+#### Scenario: Invalid jetTypeId rejected
+
+- GIVEN an authenticated player submits a record with a `jetTypeId` that does not reference an existing jet type
+- WHEN the persist request is processed
+- THEN the request is rejected with a validation error and no record is stored
 
 #### Scenario: Unauthenticated request rejected
 
@@ -52,13 +58,13 @@ The system MUST return the highest score recorded for a given authenticated play
 
 ### Requirement: List Game Records by User
 
-The system MUST list a player's own game records ordered by most recent first, MUST require authentication, and MAY support pagination.
+The system MUST list a player's own game records ordered by most recent first, MUST require authentication, and MAY support pagination. Each returned record MUST include `jetTypeId`.
 
 #### Scenario: Paginated history
 
 - GIVEN a player has 25 stored records
 - WHEN the player requests the first page of size 10
-- THEN the 10 most recent records are returned with a cursor or total to fetch the next page
+- THEN the 10 most recent records are returned, each including `jetTypeId`, with a cursor or total to fetch the next page
 
 #### Scenario: Cannot access other players' records
 

@@ -77,8 +77,8 @@ Chain strategy: stacked-to-main
 
 ## Phase 7: Testing & Verification [shared]
 
-- [ ] 7.1 [backend] Unit: VO invariants (maxSpeed>cruiseSpeed>0, defense [0,100], damage/accel >0); `ListJetTypes` returns 3; `JetTypeExists` true/false — Jest + fakes
-- [ ] 7.2 [backend] Unit: `PersistGameRecord` valid jetTypeId ok; invalid → `ValidationError`; negative score → `ValidationError` — Jest + `JetTypeExists` fake
-- [ ] 7.3 [backend] Integration: seed migration → 3 rows fixed UUIDs; `GET /jet-types` 200 no auth; `game_records.jet_type_id` FK + default Balanced on existing rows — testcontainers Postgres
-- [ ] 7.4 [frontend] Unit: exponential accel (ramp→max, decay→cruise, cruise-in-last-direction, diagonal normalize×currentSpeed); Enemy multi-hit (survives >damage, destroy+score at <=0); defense % contact; Jet selection (3 cards, click sets store, Start disabled, fetch→fallback) — Vitest + RTL
-- [ ] 7.5 [frontend] E2E: select jet → start → kill enemy (multi-hit) → gameOver → score saved with `jetTypeId` — Playwright (no canvas pixel asserts)
+- [x] 7.1 [backend] Unit: VO invariants (maxSpeed>cruiseSpeed>0, defense [0,100], damage/accel >0); `ListJetTypes` returns 3; `JetTypeExists` true/false — Jest + fakes
+- [x] 7.2 [backend] Unit: `PersistGameRecord` valid jetTypeId ok; invalid → `ValidationError`; negative score → `ValidationError` — Jest + `JetTypeExists` fake
+- [x] 7.3 [backend] Integration: seed migration → 3 rows fixed UUIDs; `GET /jet-types` 200 no auth; `game_records.jet_type_id` FK + default Balanced on existing rows — testcontainers Postgres
+- [x] 7.4 [frontend] Unit: exponential accel (ramp→max, decay→cruise, cruise-in-last-direction, diagonal normalize×currentSpeed); Enemy multi-hit (survives >damage, destroy+score at <=0); defense % contact; Jet selection (3 cards, click sets store, Start disabled, fetch→fallback) — Vitest + RTL
+- [x] 7.5 [frontend] E2E: select jet → start → kill enemy (multi-hit) → gameOver → score saved with `jetTypeId` — Playwright (no canvas pixel asserts)
