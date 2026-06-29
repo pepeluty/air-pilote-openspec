@@ -51,9 +51,9 @@ Chain strategy: stacked-to-main
 
 ## Phase 3: Frontend API + Store + Constants [frontend]
 
-- [ ] 3.1 Modify `frontend/src/ui/api/client.ts` — add `getJetTypes()`, `JetTypeDto`; extend `saveGameRecord` with `jetTypeId`
-- [ ] 3.2 Modify `frontend/src/game/state/gameStore.ts` — add `selectedJetTypeId` + `jetStats` (cached stats)
-- [ ] 3.3 Modify `frontend/src/game/constants.ts` — set `ENEMY_MAX_HEALTH=100`; add `FALLBACK_JET_TYPES` matching seed UUIDs+values exactly
+- [x] 3.1 Modify `frontend/src/ui/api/client.ts` — add `getJetTypes()`, `JetTypeDto`; extend `saveGameRecord` with `jetTypeId`
+- [x] 3.2 Modify `frontend/src/game/state/gameStore.ts` — add `selectedJetTypeId` + `jetStats` (cached stats)
+- [x] 3.3 Modify `frontend/src/game/constants.ts` — set `ENEMY_MAX_HEALTH=100`; add `FALLBACK_JET_TYPES` matching seed UUIDs+values exactly
 
 ## Phase 4: Frontend MovementSystem + Jet Entity [frontend]
 
