@@ -57,10 +57,10 @@ Chain strategy: stacked-to-main
 
 ## Phase 4: Frontend MovementSystem + Jet Entity [frontend]
 
-- [ ] 4.1 Modify `frontend/src/game/entities/Jet.ts` — replace `speed` with `maxSpeed/cruiseSpeed/accelerationRate/defense/damage`; add `currentSpeed=0`, `lastDirection={0,0}`
-- [ ] 4.2 Rewrite `frontend/src/game/systems/MovementSystem.ts` — exponential Euler `currentSpeed += (target-currentSpeed)*k*(dt/1000)`; cruise-in-last-direction; no-input holds last dir at cruise (does NOT freeze); spawn (no lastDir) stays stationary
-- [ ] 4.3 Modify `frontend/src/game/input/KeyboardInput.ts` — add `isAccelerate()` (Shift); add Shift to `GAME_KEYS`
-- [ ] 4.4 Modify `frontend/src/game/engine/GameSystems.ts` — read `jetStats` at spawn; construct `Jet` with selected type stats
+- [x] 4.1 Modify `frontend/src/game/entities/Jet.ts` — replace `speed` with `maxSpeed/cruiseSpeed/accelerationRate/defense/damage`; add `currentSpeed=0`, `lastDirection={0,0}`
+- [x] 4.2 Rewrite `frontend/src/game/systems/MovementSystem.ts` — exponential Euler `currentSpeed += (target-currentSpeed)*k*(dt/1000)`; cruise-in-last-direction; no-input holds last dir at cruise (does NOT freeze); spawn (no lastDir) stays stationary
+- [x] 4.3 Modify `frontend/src/game/input/KeyboardInput.ts` — add `isAccelerate()` (Shift); add Shift to `GAME_KEYS`
+- [x] 4.4 Modify `frontend/src/game/engine/GameSystems.ts` — read `jetStats` at spawn; construct `Jet` with selected type stats
 
 ## Phase 5: Frontend Combat Multi-hit [frontend]
 
